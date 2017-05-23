@@ -1,0 +1,1154 @@
+
+<SCRIPT language="JavaScript">
+	function nav(){
+		var resultPage=document.sitebar.siteChoice;
+		for (var i = 0; i < document.sitebar.siteChoice.length; i++)
+			{
+				if (resultPage.options[i].selected == true)
+					if (resultPage.options[i].value != "")
+						location.href=resultPage.options[i].value;
+			}
+	}
+
+	function nav2(resultPage)
+	{
+		for (var i = 0; i < resultPage.length; i++)
+			{
+				if (resultPage.options[i].selected == true)
+					if (resultPage.options[i].value != "")
+						location.href=resultPage.options[i].value;
+			}
+	}
+
+</SCRIPT>
+
+<html>
+
+<head>
+<title>Study Time Calculator</title>
+</head>
+<body
+	bgcolor=#FFFFFF
+	link=#336633
+	vlink=#669933>
+
+<table cellspacing=0 cellpadding=0 border=0 width=648>
+  <tr>
+    <form method="post"	name="sitebar">
+	  <td valign=top width="648" >
+	    <h1 align="center">
+	    <font face="Arial, Helvetica" color=#3333CC>
+	    <b><span class="Title">Study Time Calculator</span></b></font></h1>
+      </form><font face="Arial, Helvetica">
+	  <table width=454 border=0 cellspacing=0 cellpadding=0>
+        <tr valign=top>
+          <td valign=top><font face="Arial,Helvetica"><span class="ascxDefault"><div align="center">
+
+              <center>
+              <script language="JavaScript">
+<!--
+// Hide this script tag&#39s contents from old browsers
+
+function ClearForm(form){
+
+	form.num1.value = "";
+	form.calc.value = "";
+	form.num3.value = "";
+	form.calc2.value = "";
+	form.num5.value = "";
+	form.calc3.value = "";
+	form.num7.value = "";
+	form.num8.value = "";
+	form.calc4.value = "";
+	form.num9.value = "";
+	form.calc5.value = "";
+	form.num11.value = "";
+	form.num12.value = "";
+	form.num13.value = "";
+	form.num14.value = "";
+	form.calc6.value = "";
+	form.calc7.value = "";
+	form.calc8.value = "";
+
+}
+
+function mult(form) {
+
+	form.calc.value =(form.num1.value * 7);
+
+}
+function mult2(form) {
+
+	form.calc2.value =(form.num3.value * 7);
+
+}
+function mult3(form) {
+
+	form.calc3.value =(form.num5.value * 7);
+
+}
+function mult4(form) {
+
+	form.calc4.value =(form.num7.value * form.num8.value);
+
+}
+function mult5(form) {
+
+	form.calc5.value =(form.num9.value * 7);
+
+}
+
+
+function subtract(form) {
+	form.calc7.value = 168 - ((form.num1.value * 7) + (form.num3.value * 7) + (form.num5.value * 7) + (form.num7.value * form.num8.value) + (form.num9.value * 7) + (form.num11.value * 1) + (form.num12.value * 1) + (form.num13.value * 1) + (form.num14.value * 1));
+
+}
+
+function add(form) {
+	form.calc6.value =((form.num1.value * 7) + (form.num3.value * 7) + (form.num5.value * 7) + (form.num7.value * form.num8.value) + (form.num9.value * 7) + (form.num11.value * 1) + (form.num12.value * 1) + (form.num13.value * 1) + (form.num14.value * 1));
+
+}
+
+function balance(form) {
+	form.calc8.value =(form.calc7.value - (form.num13.value * 2 ));
+}
+
+// --end of Javascript
+// --></script>
+
+              <table border="1" cellpadding="10" cellspacing="10" width="625" bgcolor="#FFFFFF">
+                <tr>
+                  <td><h3 align="center">Calculate Your Available Study Time </h3>
+                    <p>There are a lot of daily activities that take time. With careful
+    planning you can manage that time and accomplish your goals for a week.
+    The first step in the planning process is to take an inventory of how much time you spend on
+    these daily activities. The next step is to set goals and decide what kinds
+    of adjustments you can make to allow yourself plenty of time for studying.</p>
+                    <p>The calculator below&nbsp;provides you with an easy way to
+    assess how much time you will have to devote to your studies if you continue
+    to spend your time as you do now. To use the calculator simply fill in all
+    the boxes except those in the gray shaded areas and then click the
+    appropriate buttons with the equal signs. The results of each calculation
+    will appear in the shaded areas.&nbsp;</p>
+                    <!--webbot BOT="GeneratedScript" PREVIEW=" " startspan --><script Language="JavaScript"><!--
+function FrontPage_Form2_Validator(theForm)
+{
+
+  var checkOK = "0123456789-.,";
+  var checkStr = theForm.num1.value;
+  var allValid = true;
+  var decPoints = 0;
+  var allNum = "";
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+    if (ch == ".")
+    {
+      allNum += ".";
+      decPoints++;
+    }
+    else if (ch != ",")
+      allNum += ch;
+  }
+  if (!allValid)
+  {
+    alert("Please enter only digit characters in the \"num1\" field.");
+    theForm.num1.focus();
+    return (false);
+  }
+
+  if (decPoints > 1)
+  {
+    alert("Please enter a valid number in the \"num1\" field.");
+    theForm.num1.focus();
+    return (false);
+  }
+
+  var chkVal = allNum;
+  var prsVal = parseFloat(allNum);
+  if (chkVal != "" && !(prsVal >= "0" && prsVal <= "24"))
+  {
+    alert("Please enter a value greater than or equal to \"0\" and less than or equal to \"24\" in the \"num1\" field.");
+    theForm.num1.focus();
+    return (false);
+  }
+
+  var checkOK = "0123456789-.,";
+  var checkStr = theForm.calc.value;
+  var allValid = true;
+  var decPoints = 0;
+  var allNum = "";
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+    if (ch == ".")
+    {
+      allNum += ".";
+      decPoints++;
+    }
+    else if (ch != ",")
+      allNum += ch;
+  }
+  if (!allValid)
+  {
+    alert("Please enter only digit characters in the \"calc\" field.");
+    theForm.calc.focus();
+    return (false);
+  }
+
+  if (decPoints > 1)
+  {
+    alert("Please enter a valid number in the \"calc\" field.");
+    theForm.calc.focus();
+    return (false);
+  }
+
+  var checkOK = "0123456789-.,";
+  var checkStr = theForm.num3.value;
+  var allValid = true;
+  var decPoints = 0;
+  var allNum = "";
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+    if (ch == ".")
+    {
+      allNum += ".";
+      decPoints++;
+    }
+    else if (ch != ",")
+      allNum += ch;
+  }
+  if (!allValid)
+  {
+    alert("Please enter only digit characters in the \"num3\" field.");
+    theForm.num3.focus();
+    return (false);
+  }
+
+  if (decPoints > 1)
+  {
+    alert("Please enter a valid number in the \"num3\" field.");
+    theForm.num3.focus();
+    return (false);
+  }
+
+  var chkVal = allNum;
+  var prsVal = parseFloat(allNum);
+  if (chkVal != "" && !(prsVal >= "0" && prsVal <= "24"))
+  {
+    alert("Please enter a value greater than or equal to \"0\" and less than or equal to \"24\" in the \"num3\" field.");
+    theForm.num3.focus();
+    return (false);
+  }
+
+  var checkOK = "0123456789-.,";
+  var checkStr = theForm.calc2.value;
+  var allValid = true;
+  var decPoints = 0;
+  var allNum = "";
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+    if (ch == ".")
+    {
+      allNum += ".";
+      decPoints++;
+    }
+    else if (ch != ",")
+      allNum += ch;
+  }
+  if (!allValid)
+  {
+    alert("Please enter only digit characters in the \"calc2\" field.");
+    theForm.calc2.focus();
+    return (false);
+  }
+
+  if (decPoints > 1)
+  {
+    alert("Please enter a valid number in the \"calc2\" field.");
+    theForm.calc2.focus();
+    return (false);
+  }
+
+  var checkOK = "0123456789-.,";
+  var checkStr = theForm.num5.value;
+  var allValid = true;
+  var decPoints = 0;
+  var allNum = "";
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+    if (ch == ".")
+    {
+      allNum += ".";
+      decPoints++;
+    }
+    else if (ch != ",")
+      allNum += ch;
+  }
+  if (!allValid)
+  {
+    alert("Please enter only digit characters in the \"num5\" field.");
+    theForm.num5.focus();
+    return (false);
+  }
+
+  if (decPoints > 1)
+  {
+    alert("Please enter a valid number in the \"num5\" field.");
+    theForm.num5.focus();
+    return (false);
+  }
+
+  var chkVal = allNum;
+  var prsVal = parseFloat(allNum);
+  if (chkVal != "" && !(prsVal >= "0" && prsVal <= "24"))
+  {
+    alert("Please enter a value greater than or equal to \"0\" and less than or equal to \"24\" in the \"num5\" field.");
+    theForm.num5.focus();
+    return (false);
+  }
+
+  var checkOK = "0123456789-.,";
+  var checkStr = theForm.calc3.value;
+  var allValid = true;
+  var decPoints = 0;
+  var allNum = "";
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+    if (ch == ".")
+    {
+      allNum += ".";
+      decPoints++;
+    }
+    else if (ch != ",")
+      allNum += ch;
+  }
+  if (!allValid)
+  {
+    alert("Please enter only digit characters in the \"calc3\" field.");
+    theForm.calc3.focus();
+    return (false);
+  }
+
+  if (decPoints > 1)
+  {
+    alert("Please enter a valid number in the \"calc3\" field.");
+    theForm.calc3.focus();
+    return (false);
+  }
+
+  var checkOK = "0123456789-.,";
+  var checkStr = theForm.num9.value;
+  var allValid = true;
+  var decPoints = 0;
+  var allNum = "";
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+    if (ch == ".")
+    {
+      allNum += ".";
+      decPoints++;
+    }
+    else if (ch != ",")
+      allNum += ch;
+  }
+  if (!allValid)
+  {
+    alert("Please enter only digit characters in the \"num9\" field.");
+    theForm.num9.focus();
+    return (false);
+  }
+
+  if (decPoints > 1)
+  {
+    alert("Please enter a valid number in the \"num9\" field.");
+    theForm.num9.focus();
+    return (false);
+  }
+
+  var chkVal = allNum;
+  var prsVal = parseFloat(allNum);
+  if (chkVal != "" && !(prsVal >= "0" && prsVal <= "24"))
+  {
+    alert("Please enter a value greater than or equal to \"0\" and less than or equal to \"24\" in the \"num9\" field.");
+    theForm.num9.focus();
+    return (false);
+  }
+
+  var checkOK = "0123456789-.,";
+  var checkStr = theForm.calc5.value;
+  var allValid = true;
+  var decPoints = 0;
+  var allNum = "";
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+    if (ch == ".")
+    {
+      allNum += ".";
+      decPoints++;
+    }
+    else if (ch != ",")
+      allNum += ch;
+  }
+  if (!allValid)
+  {
+    alert("Please enter only digit characters in the \"calc5\" field.");
+    theForm.calc5.focus();
+    return (false);
+  }
+
+  if (decPoints > 1)
+  {
+    alert("Please enter a valid number in the \"calc5\" field.");
+    theForm.calc5.focus();
+    return (false);
+  }
+
+  var checkOK = "0123456789-.,";
+  var checkStr = theForm.num7.value;
+  var allValid = true;
+  var decPoints = 0;
+  var allNum = "";
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+    if (ch == ".")
+    {
+      allNum += ".";
+      decPoints++;
+    }
+    else if (ch != ",")
+      allNum += ch;
+  }
+  if (!allValid)
+  {
+    alert("Please enter only digit characters in the \"num7\" field.");
+    theForm.num7.focus();
+    return (false);
+  }
+
+  if (decPoints > 1)
+  {
+    alert("Please enter a valid number in the \"num7\" field.");
+    theForm.num7.focus();
+    return (false);
+  }
+
+  var chkVal = allNum;
+  var prsVal = parseFloat(allNum);
+  if (chkVal != "" && !(prsVal >= "0" && prsVal <= "24"))
+  {
+    alert("Please enter a value greater than or equal to \"0\" and less than or equal to \"24\" in the \"num7\" field.");
+    theForm.num7.focus();
+    return (false);
+  }
+
+  var checkOK = "0123456789-.,";
+  var checkStr = theForm.num8.value;
+  var allValid = true;
+  var decPoints = 0;
+  var allNum = "";
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+    if (ch == ".")
+    {
+      allNum += ".";
+      decPoints++;
+    }
+    else if (ch != ",")
+      allNum += ch;
+  }
+  if (!allValid)
+  {
+    alert("Please enter only digit characters in the \"num8\" field.");
+    theForm.num8.focus();
+    return (false);
+  }
+
+  if (decPoints > 1)
+  {
+    alert("Please enter a valid number in the \"num8\" field.");
+    theForm.num8.focus();
+    return (false);
+  }
+
+  var chkVal = allNum;
+  var prsVal = parseFloat(allNum);
+  if (chkVal != "" && !(prsVal >= "0" && prsVal <= "7"))
+  {
+    alert("Please enter a value greater than or equal to \"0\" and less than or equal to \"7\" in the \"num8\" field.");
+    theForm.num8.focus();
+    return (false);
+  }
+
+  var checkOK = "0123456789-.,";
+  var checkStr = theForm.calc4.value;
+  var allValid = true;
+  var decPoints = 0;
+  var allNum = "";
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+    if (ch == ".")
+    {
+      allNum += ".";
+      decPoints++;
+    }
+    else if (ch != ",")
+      allNum += ch;
+  }
+  if (!allValid)
+  {
+    alert("Please enter only digit characters in the \"calc4\" field.");
+    theForm.calc4.focus();
+    return (false);
+  }
+
+  if (decPoints > 1)
+  {
+    alert("Please enter a valid number in the \"calc4\" field.");
+    theForm.calc4.focus();
+    return (false);
+  }
+
+  var checkOK = "0123456789-.,";
+  var checkStr = theForm.num11.value;
+  var allValid = true;
+  var decPoints = 0;
+  var allNum = "";
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+    if (ch == ".")
+    {
+      allNum += ".";
+      decPoints++;
+    }
+    else if (ch != ",")
+      allNum += ch;
+  }
+  if (!allValid)
+  {
+    alert("Please enter only digit characters in the \"num11\" field.");
+    theForm.num11.focus();
+    return (false);
+  }
+
+  if (decPoints > 1)
+  {
+    alert("Please enter a valid number in the \"num11\" field.");
+    theForm.num11.focus();
+    return (false);
+  }
+
+  var chkVal = allNum;
+  var prsVal = parseFloat(allNum);
+  if (chkVal != "" && !(prsVal >= "0" && prsVal <= "168"))
+  {
+    alert("Please enter a value greater than or equal to \"0\" and less than or equal to \"168\" in the \"num11\" field.");
+    theForm.num11.focus();
+    return (false);
+  }
+
+  var checkOK = "0123456789-.,";
+  var checkStr = theForm.num14.value;
+  var allValid = true;
+  var decPoints = 0;
+  var allNum = "";
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+    if (ch == ".")
+    {
+      allNum += ".";
+      decPoints++;
+    }
+    else if (ch != ",")
+      allNum += ch;
+  }
+  if (!allValid)
+  {
+    alert("Please enter only digit characters in the \"num14\" field.");
+    theForm.num14.focus();
+    return (false);
+  }
+
+  if (decPoints > 1)
+  {
+    alert("Please enter a valid number in the \"num14\" field.");
+    theForm.num14.focus();
+    return (false);
+  }
+
+  var chkVal = allNum;
+  var prsVal = parseFloat(allNum);
+  if (chkVal != "" && !(prsVal >= "0" && prsVal <= "168"))
+  {
+    alert("Please enter a value greater than or equal to \"0\" and less than or equal to \"168\" in the \"num14\" field.");
+    theForm.num14.focus();
+    return (false);
+  }
+
+  var checkOK = "0123456789-.,";
+  var checkStr = theForm.num12.value;
+  var allValid = true;
+  var decPoints = 0;
+  var allNum = "";
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+    if (ch == ".")
+    {
+      allNum += ".";
+      decPoints++;
+    }
+    else if (ch != ",")
+      allNum += ch;
+  }
+  if (!allValid)
+  {
+    alert("Please enter only digit characters in the \"num12\" field.");
+    theForm.num12.focus();
+    return (false);
+  }
+
+  if (decPoints > 1)
+  {
+    alert("Please enter a valid number in the \"num12\" field.");
+    theForm.num12.focus();
+    return (false);
+  }
+
+  var chkVal = allNum;
+  var prsVal = parseFloat(allNum);
+  if (chkVal != "" && !(prsVal >= "0" && prsVal <= "168"))
+  {
+    alert("Please enter a value greater than or equal to \"0\" and less than or equal to \"168\" in the \"num12\" field.");
+    theForm.num12.focus();
+    return (false);
+  }
+
+  var checkOK = "0123456789-.,";
+  var checkStr = theForm.num13.value;
+  var allValid = true;
+  var decPoints = 0;
+  var allNum = "";
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+    if (ch == ".")
+    {
+      allNum += ".";
+      decPoints++;
+    }
+    else if (ch != ",")
+      allNum += ch;
+  }
+  if (!allValid)
+  {
+    alert("Please enter only digit characters in the \"num13\" field.");
+    theForm.num13.focus();
+    return (false);
+  }
+
+  if (decPoints > 1)
+  {
+    alert("Please enter a valid number in the \"num13\" field.");
+    theForm.num13.focus();
+    return (false);
+  }
+
+  var chkVal = allNum;
+  var prsVal = parseFloat(allNum);
+  if (chkVal != "" && !(prsVal >= "0" && prsVal <= "168"))
+  {
+    alert("Please enter a value greater than or equal to \"0\" and less than or equal to \"168\" in the \"num13\" field.");
+    theForm.num13.focus();
+    return (false);
+  }
+
+  var checkOK = "0123456789-.,";
+  var checkStr = theForm.calc6.value;
+  var allValid = true;
+  var decPoints = 0;
+  var allNum = "";
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+    if (ch == ".")
+    {
+      allNum += ".";
+      decPoints++;
+    }
+    else if (ch != ",")
+      allNum += ch;
+  }
+  if (!allValid)
+  {
+    alert("Please enter only digit characters in the \"calc6\" field.");
+    theForm.calc6.focus();
+    return (false);
+  }
+
+  if (decPoints > 1)
+  {
+    alert("Please enter a valid number in the \"calc6\" field.");
+    theForm.calc6.focus();
+    return (false);
+  }
+
+  var checkOK = "0123456789-.,";
+  var checkStr = theForm.calc7.value;
+  var allValid = true;
+  var decPoints = 0;
+  var allNum = "";
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+    if (ch == ".")
+    {
+      allNum += ".";
+      decPoints++;
+    }
+    else if (ch != ",")
+      allNum += ch;
+  }
+  if (!allValid)
+  {
+    alert("Please enter only digit characters in the \"calc7\" field.");
+    theForm.calc7.focus();
+    return (false);
+  }
+
+  if (decPoints > 1)
+  {
+    alert("Please enter a valid number in the \"calc7\" field.");
+    theForm.calc7.focus();
+    return (false);
+  }
+
+  var checkOK = "0123456789-.,";
+  var checkStr = theForm.calc8.value;
+  var allValid = true;
+  var decPoints = 0;
+  var allNum = "";
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+    if (ch == ".")
+    {
+      allNum += ".";
+      decPoints++;
+    }
+    else if (ch != ",")
+      allNum += ch;
+  }
+  if (!allValid)
+  {
+    alert("Please enter only digit characters in the \"calc8\" field.");
+    theForm.calc8.focus();
+    return (false);
+  }
+
+  if (decPoints > 1)
+  {
+    alert("Please enter a valid number in the \"calc8\" field.");
+    theForm.calc8.focus();
+    return (false);
+  }
+  return (true);
+}
+//--></script><!--webbot BOT="GeneratedScript" endspan --><form method="post" name="FrontPage_Form2" onsubmit="return FrontPage_Form2_Validator(this)">
+                      <div align="center"><center><table border="0" cellPadding="5" cellSpacing="0" width="600">
+                          <TBODY>
+                            <tr>
+                              <td align="center" borderColor="#000000" width="300" valign="bottom" style="border-bottom-style: solid"><font size="2" face="Arial"><b>&nbsp;</b></font></td>
+                              <td align="center" borderColor="#000000" width="75" valign="bottom" style="border-bottom-style: solid"><font size="2" face="Arial"><b>Number of Hours per Day</b></font></td>
+                              <td align="center" borderColor="#000000" width="75" valign="bottom" style="border-bottom-style: solid"><font size="2" face="Arial"><b>Number of Days per week</b></font></td>
+                              <td align="center" borderColor="#000000" width="75" valign="bottom" style="border-bottom-style: solid"><font size="2" face="Arial"><b>Click
+            Button to Calculate</b></font></td>
+                              <td align="center" bgcolor="#C0C0C0" borderColor="#000000" width="75" valign="bottom" style="border-bottom-style: solid"><font size="2" face="Arial"><b>Number
+            of hours per week</b></font></td>
+                            </tr>
+                          </center>
+                          <tr>
+                            <td width="300" align="left" valign="middle" style="border-bottom-style: solid"><div
+          align="right"><p align="left"><font size="2" face="Arial">On the average, how many
+              hours do you sleep in each 24 hour period?</font>
+                                </div>
+                              </td>
+                              <td align="center" width="75" valign="middle" style="border-bottom-style: solid"><div align="center"><p><font size="2" face="Arial">
+                                  <!--webbot bot="Validation" s-data-type="Number" s-number-separators=",." s-validation-constraint="Greater than or equal to" s-validation-value="0" s-validation-constraint="Less than or equal to" s-validation-value="24" --><input name="num1"
+          size="2"></font>
+                                  </div>
+                                </td>
+                                <td align="center" width="75" valign="middle" style="border-bottom-style: solid"><div align="center"><p><font size="2" face="Arial">x
+              7</font>
+                                    </div>
+                                  </td>
+                                  <td align="center" width="75" valign="middle" style="border-bottom-style: solid"><div align="center"><p><font size="2" face="Arial"><input onclick="mult(this.form)" type="button" value=" = "></font>
+                                      </div>
+                                    </td>
+                                    <td align="center" bgcolor="#C0C0C0" width="75" valign="middle" style="border-bottom-style: solid"><div align="center"><p><font size="2" face="Arial">
+                                        <!--webbot bot="Validation" s-data-type="Number" s-number-separators=",." --><input name="calc"
+          size="3"></font>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr align="center">
+                                      <td width="300" align="left" valign="middle" style="border-bottom-style: solid"><div
+          align="right"><p align="left"><font size="2" face="Arial">On the average, how many
+              hours a day do you engage in grooming activities?</font>
+                                          </div>
+                                        </td>
+                                        <td align="center" width="75" valign="middle" style="border-bottom-style: solid"><div align="center"><p><font size="2" face="Arial">
+                                            <!--webbot bot="Validation" s-data-type="Number" s-number-separators=",." s-validation-constraint="Greater than or equal to" s-validation-value="0" s-validation-constraint="Less than or equal to" s-validation-value="24" --><input name="num3"
+          size="2"></font>
+                                            </div>
+                                          </td>
+                                          <td align="center" width="75" valign="middle" style="border-bottom-style: solid"><div align="center"><p><font size="2" face="Arial">x
+              7</font>
+                                              </div>
+                                            </td>
+                                            <td align="center" width="75" valign="middle" style="border-bottom-style: solid"><div align="center"><p><font size="2" face="Arial"><input onclick="mult2(this.form)" type="button" value=" = "></font>
+                                                </div>
+                                              </td>
+                                              <td align="center" bgcolor="#C0C0C0" width="75" valign="middle" style="border-bottom-style: solid"><div align="center"><p><font size="2" face="Arial">
+                                                  <!--webbot bot="Validation" s-data-type="Number" s-number-separators=",." --><input name="calc2"
+          size="3"></font>
+                                                  </div>
+                                                </td>
+                                              </tr>
+                                              <tr align="center">
+                                                <td width="300" align="left" valign="middle" style="border-bottom-style: solid"><div
+          align="right"><p align="left"><font size="2" face="Arial">On the average, how many
+              hours a day do you spend on meals, including preparation and
+              clean-up time?</font>
+                                                    </div>
+                                                  </td>
+                                                  <td align="center" width="75" valign="middle" style="border-bottom-style: solid"><div align="center"><p><font size="2" face="Arial">
+                                                      <!--webbot bot="Validation" s-data-type="Number" s-number-separators=",." s-validation-constraint="Greater than or equal to" s-validation-value="0" s-validation-constraint="Less than or equal to" s-validation-value="24" --><input name="num5"
+          size="2"></font>
+                                                      </div>
+                                                    </td>
+                                                    <td align="center" width="75" valign="middle" style="border-bottom-style: solid"><div align="center"><p><font size="2" face="Arial">x
+              7</font>
+                                                        </div>
+                                                      </td>
+                                                      <td align="center" width="75" valign="middle" style="border-bottom-style: solid"><div align="center"><p><font size="2" face="Arial"><input onclick="mult3(this.form)" type="button" value=" = "></font>
+                                                          </div>
+                                                        </td>
+                                                        <td align="center" bgcolor="#C0C0C0" width="75" valign="middle" style="border-bottom-style: solid"><div align="center"><p><font size="2" face="Arial">
+                                                            <!--webbot bot="Validation" s-data-type="Number" s-number-separators=",." --><input name="calc3"
+          size="3"></font>
+                                                            </div>
+                                                          </td>
+                                                        </tr>
+                                                        <tr>
+                                                          <td width="300" align="left" valign="middle" style="border-bottom-style: solid"><div
+          align="right"><p align="left"><font size="2" face="Arial">On the average, how many
+              hours a day do you spend doing errands like buying groceries or
+              doing your laundry?</font>
+                                                              </div>
+                                                            </td>
+                                                            <td align="center" width="75" valign="middle" style="border-bottom-style: solid"><div align="center"><p><font size="2" face="Arial">
+                                                                <!--webbot bot="Validation" s-data-type="Number" s-number-separators=",." s-validation-constraint="Greater than or equal to" s-validation-value="0" s-validation-constraint="Less than or equal to" s-validation-value="24" --><input name="num9"
+          size="2"></font>
+                                                                </div>
+                                                              </td>
+                                                              <td align="center" width="75" valign="middle" style="border-bottom-style: solid"><font size="2" face="Arial">x
+            7</font></td>
+                                                              <td align="center" width="75" valign="middle" style="border-bottom-style: solid"><font size="2" face="Arial"><input
+          onclick="mult5(this.form)" type="button" value=" = "></font></td>
+                                                              <td align="center" bgcolor="#C0C0C0" width="75" valign="middle" style="border-bottom-style: solid"><font size="2" face="Arial">
+                                                                <!--webbot bot="Validation" s-data-type="Number" s-number-separators=",." --><input name="calc5" size="3"></font></td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td width="300" align="left" valign="middle" style="border-bottom-style: solid"><div
+          align="right"><p align="left"><font size="2" face="Arial">On the average, how many
+              hours do you spend commuting each day and how many days do you
+              commute?&nbsp;Include the time you spend walking from bus stop or
+              parking lot to your destinations.</font>
+                                                                  </div>
+                                                                </td>
+                                                                <td align="center" width="75" valign="middle" style="border-bottom-style: solid"><div align="center"><p><font size="2" face="Arial">
+                                                                    <!--webbot bot="Validation" s-data-type="Number" s-number-separators=",." s-validation-constraint="Greater than or equal to" s-validation-value="0" s-validation-constraint="Less than or equal to" s-validation-value="24" --><input name="num7"
+          size="2"></font>
+                                                                    </div>
+                                                                  </td>
+                                                                  <td align="center" width="75" valign="middle" style="border-bottom-style: solid"><font size="2" face="Arial">x
+                                                                    <!--webbot bot="Validation" s-data-type="Number" s-number-separators=",." s-validation-constraint="Greater than or equal to" s-validation-value="0" s-validation-constraint="Less than or equal to" s-validation-value="7" --><input name="num8" size="1"></font></td>
+                                                                  <td align="center" width="75" valign="middle" style="border-bottom-style: solid"><font size="2" face="Arial"><input
+          onclick="mult4(this.form)" type="button" value=" = "></font></td>
+                                                                  <td align="center" bgcolor="#C0C0C0" width="75" valign="middle" style="border-bottom-style: solid"><font size="2" face="Arial">
+                                                                    <!--webbot bot="Validation" s-data-type="Number" s-number-separators=",." --><input name="calc4" size="3"></font></td>
+                                                                </tr>
+                                                                <tr>
+                                                                  <td colSpan="4" width="525" align="left" style="border-bottom-style: solid"><div
+          align="right"><p align="left"><font size="2" face="Arial">On the average, how many hours do you spend each week doing
+          activities like participating in a student organization
+              activities,&nbsp; playing organized sports, or going to church?</font>
+                                                                      </div>
+                                                                    </td>
+                                                                    <td align="center" width="75" style="border-bottom-style: solid"><font size="2" face="Arial">
+                                                                      <!--webbot bot="Validation" s-data-type="Number" s-number-separators=",." s-validation-constraint="Greater than or equal to" s-validation-value="0" s-validation-constraint="Less than or equal to" s-validation-value="168" --><input name="num11" size="3"></font></td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                    <td colSpan="4" width="525" align="left" style="border-bottom-style: solid"><div
+          align="right"><p align="left"><font size="2" face="Arial">On the average, how many hours per week do you spend
+              on leisure activities like going out with friends, watching TV,
+              reading for pleasure, working out, or going to parties? Don&#39t
+              underestimate this one!</font>
+                                                                        </div>
+                                                                      </td>
+                                                                      <td align="center" width="75" style="border-bottom-style: solid"><font size="2" face="Arial">
+                                                                        <!--webbot bot="Validation" s-data-type="Number" s-number-separators=",." s-validation-constraint="Greater than or equal to" s-validation-value="0" s-validation-constraint="Less than or equal to" s-validation-value="168" --><input name="num14" size="3"></font></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                      <td colSpan="4" width="525" align="left" style="border-bottom-style: solid"><div
+          align="right"><p align="left"><font size="2" face="Arial">On the average, how many hours a week do you work at a job?</font>
+                                                                          </div>
+                                                                        </td>
+                                                                        <td align="center" width="75" style="border-bottom-style: solid"><font size="2" face="Arial">
+                                                                          <!--webbot bot="Validation" s-data-type="Number" s-number-separators=",." s-validation-constraint="Greater than or equal to" s-validation-value="0" s-validation-constraint="Less than or equal to" s-validation-value="168" --><input name="num12" size="3"></font></td>
+                                                                      </tr>
+                                                                      <tr>
+                                                                        <td colSpan="4" width="525" align="left" style="border-bottom-style: solid"><div
+          align="right"><p align="left"><font size="2" face="Arial">How many hours do you
+              now spend or plan to spend in class each week? Be sure to include
+              time to get from one class to another in the time commitment here.</font>
+                                                                            </div>
+                                                                          </td>
+                                                                          <td align="center" width="75" style="border-bottom-style: solid"><font size="2" face="Arial">
+                                                                            <!--webbot bot="Validation" s-data-type="Number" s-number-separators=",." s-validation-constraint="Greater than or equal to" s-validation-value="0" s-validation-constraint="Less than or equal to" s-validation-value="168" --><input name="num13" size="3"></font></td>
+                                                                        </tr>
+                                                                        <tr align="center">
+                                                                          <td width="600" align="left" valign="middle" colspan="5" bgcolor="#CCFFCC" style="border-bottom-style: solid"><b>That&#39s
+            all the information needed to calculate your available study time.
+            The next section will give you the results.</b>
+                                                                          </td>
+                                                                        </tr>
+                                                                        <tr align="center">
+                                                                          <td width="300" align="left" valign="middle" style="border-bottom-style: solid"><font size="2" face="Arial">Click
+            this button to compute the total number of hours you are spending
+            each week engaged in daily living activities and school activities.</font>
+                                                                          </td>
+                                                                          <td align="right" width="150" valign="middle" colspan="2" style="border-bottom-style: solid"><b>Total
+            Number of Hours Committed per Week</b>
+                                                                          </td>
+                                                                          <td align="center" width="75" valign="middle" style="border-bottom-style: solid"><font face="Comic Sans MS"><p></font><font size="2" face="Arial"><input onclick="add(this.form)"
+          type="button" value=" = "></font>
+                                                                            </td>
+                                                                            <td align="center" bgcolor="#C0C0C0" width="75" valign="middle" style="border-bottom-style: solid"><font size="2" face="Arial">
+                                                                              <!--webbot bot="Validation" s-data-type="Number" s-number-separators=",." --><input name="calc6" size="3"></font></td>
+                                                                          </tr>
+                                                                          <tr align="center">
+                                                                            <td width="300" align="left" valign="middle" style="border-bottom-style: solid"><font size="2" face="Arial"> Now
+            you can click this button to find out how many hours remain for
+            studying given that there are 168 hours in a week.</font>
+                                                                            </td>
+                                                                            <td align="right" width="150" valign="middle" colspan="2" style="border-bottom-style: solid"><b>Hours
+            Available for Study per Week</b>
+                                                                            </td>
+                                                                            <td align="center" width="75" valign="middle" style="border-bottom-style: solid"><p><font size="2" face="Arial"><input
+          onclick="subtract(this.form)" type="button" value=" = "></font>
+                                                                              </td>
+                                                                              <td align="center" bgcolor="#C0C0C0" width="75" valign="middle" style="border-bottom-style: solid"><font size="2" face="Arial">
+                                                                                <!--webbot bot="Validation" s-data-type="Number" s-number-separators=",." --><input name="calc7" size="4"></font></td>
+                                                                            </tr>
+                                                                            <tr align="center">
+                                                                              <td width="300" align="left" valign="middle" style="border-bottom-style: solid"><font face="Arial" size="2">For
+            every hour you spend in class expect to spend a <u>minimum</u> of 2
+            hours of out-of-class study time. Click this button to determine
+            whether you have enough time or too little for your study
+            requirements. If it is a minus value you need to make some
+            adjustments in your time commitments and recalculate.</font>
+                                                                              </td>
+                                                                              <td align="right" width="150" valign="middle" colspan="2" style="border-bottom-style: solid"><b>Balance</b>
+                                                                              </td>
+                                                                              <td align="center" width="75" valign="middle" style="border-bottom-style: solid"><p><font size="2" face="Arial"><input
+          onclick="balance(this.form)" type="button" value=" = "></font>
+                                                                                </td>
+                                                                                <td align="center" bgcolor="#C0C0C0" width="75" valign="middle" style="border-bottom-style: solid"><font size="2" face="Arial">
+                                                                                  <!--webbot bot="Validation" s-data-type="Number" s-number-separators=",." --><input name="calc8" size="4"></font></td>
+                                                                              </tr>
+                                                                            </TBODY>
+                                                                          </table>
+                                                                        </div><div align="center"><center><table border="0" cellPadding="3">
+                                                                            <TBODY>
+                                                                              <tr>
+                                                                                <td><font size="2" face="Arial"><input onclick="ClearForm(this.form)" type="reset" value="Clear all Values and Start Over"></font></td>
+                                                                              </tr>
+                                                                            </TBODY>
+                                                                          </table>
+                                                                          </center></div>
+                                                                      </form>
+                                                                    </td>
+                                                                  </tr>
+                                                                </table>
+                                                              </center>
+                                                            </div>
+                                                            <p>After using the calculator check out the tips on <a href="http://main.uab.edu/show.asp?durki=34846">Time Management.<a>
+                                                            <BR>This study time calculator has been adapted from a well done
+series on <a href="http://www.ucc.vt.edu/stdysk/stdyhlp.html">study skills</a>
+created by Virginia Tech.
+
+                                                            </span></font></td>
+                                                          </tr>
+                                                        </table>
+                                                        <table width=454 border=0 cellspacing=0 cellpadding=0>
+                                                          <tr valign=top><td><img src="images/dot_clear.gif" width=10 height=1 border=0></td>
+                                                          </tr>
+                                                        </table>
+                                                      </font>
